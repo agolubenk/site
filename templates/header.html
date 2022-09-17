@@ -114,11 +114,9 @@
                                         <ul class="sub-menu">
                                             <li><a href="blog.html" class=" text-truncate">Все статьи</a></li>
                                             <li><hr class="dropdown-divider"></li>
-
                                              {% for post in post_list %}
                                             <li><a href="blog.html?postid={{ post.id }}" class=" text-truncate">{{ post.title }}</a></li>
                                              {% endfor %}
-
                                         </ul>
                                     </li>
                                 </ul>
@@ -390,9 +388,9 @@ var sendtelegram = function() {
                         <div class="single-footer f-link text-truncate">
                             <h3>Блог</h3>
                             <ul>
-                                <li><a href="blog.html">Все статьи</a></li>
+                                <li><a href="blog.html" style="margin-top: -4px">Все статьи</a></li>
                                         {% for post in post_list %}
-                                        <li><a href="blog.html?postid={{ post.id }}" class=" text-truncate">{{ post.title }}</a></li>
+                                <li><a href="blog.html?postid={{ post.id }}" class=" text-truncate" style="margin-top: -3px">{{ post.title }}</a></li>
                                         {% endfor %}
                             </ul>
                         </div>

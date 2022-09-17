@@ -9,10 +9,8 @@ urlpatterns = [
     path('vacancy/', views.vacancy, name='vacancy'),
     path('price/', views.price, name='price'),
     path('docs/', views.docs, name='docs'),
-    path('', views.home, name='home'),
-#   path('summernote/', include('django_summernote.urls')),
-
-
+    path('', views.post_list, name='home'),
+    path('summernote/', include('django_summernote.urls')),
 ]
 
 

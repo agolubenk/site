@@ -357,52 +357,46 @@
                 </div>
             </div>
             <div class="row">
+
+
+
+                <div class="col-lg-3 col-md-4 col-12 my-1">
+                    <!-- Single News -->
+                    <div class="single-news wow fadeInUp card card-cover my-auto border-0" style="border-radius:2em" data-wow-delay=".2s">
+                        <div class="image" style="height: 210px;">
+                            <img class="thumb" src="{{ post.webimg }}" alt="#">
+                            <div class="meta-details">
+                                &nbsp;<i class="bi bi-calendar-date text-white fa-lg"></i> <span>{{ post.created_on|date:"d F" }}</span>
+                            </div>
+                        </div>
+                        <div class="content-body">
+                            <h4 class="title"><a class="stretched-link nav-link mt-auto" data-bs-toggle="modal" data-bs-target="#blog-modal{{ post.id }}">{{ post.title }}</a></h4>
+                        </div>
+                    </div>
+                    <!-- End Single News -->
+
+
+
+
+
+                    {% for post in post_list %}
                 <div class="col-lg-4 col-md-6 col-12">
                     <!-- Single News -->
                     <div class="single-news wow fadeInUp" style="border: solid 1px; border-radius: 2em;" data-wow-delay=".2s">
                         <div class="image" style="height: 320px; border-radius: 2em 2em 0 2em;">
                             <img class="thumb"  src="{% static "images/blog/blog-label-6.jpg" %}" height="380px" alt="#">
                             <div class="meta-details" style="margin-bottom: -20px; margin-right:-30px">
-                                &nbsp;<i class="bi bi-calendar-date text-white fa-lg"></i> <span>03 aug   &nbsp;</span>
+                                &nbsp;<i class="bi bi-calendar-date text-white fa-lg"></i> <span>{{ post.created_on|date:"d f"}}</span>
                             </div>
                         </div>
                         <div class="content-body ps-4" style="background-color: transparent!important">
-                            <h4 class="title"><a href="blog.html?postid=5">Наши ошибки - это наш опыт</a></h4>
+                            <h4 class="title"><a href="blog.html?postid={{ post.id }}">{{ post.title }}</a></h4>
                         </div>
                     </div>
                     <!-- End Single News -->
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Single News -->
-                    <div class="single-news wow fadeInUp" style="border: solid 1px; border-radius: 2em;" data-wow-delay=".4s">
-                        <div class="image" style="height: 280px; border-radius: 2em 2em 0 2em;">
-                            <img class="thumb"  src="{% static "images/blog/blog-label-5.jpg" %}" height="380px" alt="#">
-                            <div class="meta-details" style="margin-bottom: -20px; margin-right:-30px">
-                                &nbsp;<i class="bi bi-calendar-date text-white fa-lg"></i> <span>01 aug   &nbsp;</span>
-                            </div>
-                        </div>
-                        <div class="content-body ps-4">
-                            <h4 class="title"><a href="blog.html?postid=4">Удаленная работа</a></h4>
-                        </div>
-                    </div>
-                    <!-- End Single News -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Single News -->
-                    <div class="single-news wow fadeInUp" style="border: solid 1px; border-radius: 2em;" data-wow-delay=".6s">
-                        <div class="image" style="height: 220px; border-radius: 2em 2em 0 2em;">
-                            <img class="thumb"  src="{% static "images/blog/blog-label-2.jpg" %}" height="380px" alt="#">
-                            <div class="meta-details" style="margin-bottom: -20px; margin-right:-30px">
-                                &nbsp;<i class="bi bi-calendar-date text-white fa-lg"></i> <span>16 jul   &nbsp;</span>
-                            </div>
-                        </div>
-                        <div class="content-body ps-4">
-                            <h4 class="title"><a href="blog.html?postid=3">Современные тенденции в управлении персоналом</a></h4>
-                        </div>
-                    </div>
-                    <!-- End Single News -->
-                </div>
-            </div>
+                 {% endfor %}
+                      </div>
         </div>
     </div>
     <!-- End Latest News Area -->
