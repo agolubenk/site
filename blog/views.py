@@ -9,9 +9,9 @@ class PostList(generic.ListView):
     template_name = 'header.html'
     paginate_by = 8
 
-def menu_list(request):
-    menus = Post.objects.filter(status=1).order_by('-created_on')[:3]
-    return render(request, 'header.html', {'menus': menus})
+#def menu_list(request):
+#    menus = Post.objects.filter(status=1).order_by('-created_on')[:3]
+#    return render(request, 'header.html', {'menus': menus})
 
 
 

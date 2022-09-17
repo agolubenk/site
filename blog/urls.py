@@ -10,7 +10,7 @@ urlpatterns = [
     path('price/', views.price, name='price'),
     path('docs/', views.docs, name='docs'),
     path('', views.home, name='home'),
-    path('summernote/', include('django_summernote.urls')),
+#   path('summernote/', include('django_summernote.urls')),
 
 
 ]
