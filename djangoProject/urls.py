@@ -25,4 +25,7 @@ urlpatterns = [
     path('vacancy/', include('blog.urls')),
     path('price/', include('blog.urls')),
     path('docs/', include('blog.urls')),
+    path('join/', include('blog.urls')),
+    path('upload/', include('blog.urls')),
+    path('invite/', include('blog.urls')),
 ]

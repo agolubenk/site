@@ -1,4 +1,5 @@
 {% extends "header.html" %}
+{% load static %}
 {% block content %}
     <!-- Start Breadcrumbs -->
     <div class="breadcrumbs free-version-banner-1 vh-100 position-relative" style="opacity: 0.9">
@@ -6,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-12">
                     <div class="breadcrumbs-content mt-5">
-                        <img src="assets/images/logo/big-logo.png" style="width: 50%; max-width: 240px;">
+                        <img src="{% static 'images/logo/big-logo.png' %}" style="width: 50%; max-width: 240px;">
                         <h2 class="page-title mt-4">РЕКРУТИНГОВОЕ АГЕНТСТВО<br><span  class="display-3">Хочу в IT</span></h2>
                         <h5 class="text-white mt-1">О КОМПАНИИ</h5>
                     </div>
@@ -140,7 +141,7 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="about-right wow fadeInRight" data-wow-delay=".4s">
-                        <img src="assets/images/about/about-img-1.jpg" style="border-radius: 2em 0 0 2em" width="120%" alt="#">
+                        <img src="{% static 'images/about/about-img-1.jpg' %}" style="border-radius: 2em 0 0 2em" width="120%" alt="#">
                     </div>
                 </div>
             </div>
@@ -198,19 +199,19 @@
                     <div class="col-lg-7 col-12">
                                                 <ul class="brand-list liststyle d-flex flex-wrap justify-content-center">
                             <li><a href="#">
-                                    <img src="assets/images/clients/seedilon-logo.svg" height="66px" width="124px" alt="Brand Logo Images">
+                                    <img src="{% static 'images/clients/seedilon-logo.svg' %}" height="66px" width="124px" alt="Brand Logo Images">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="assets/images/clients/globalsale-logo.png" height="124px" width="124px" alt="Brand Logo Images">
+                                    <img src="{% static 'images/clients/globalsale-logo.png' %}" height="124px" width="124px" alt="Brand Logo Images">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="assets/images/clients/yoursoft-logo.svg" height="66px" width="124px" alt="Brand Logo Images">
+                                    <img src="{% static 'images/clients/yoursoft-logo.svg' %}" height="66px" width="124px" alt="Brand Logo Images">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="assets/images/clients/deriv-logo.svg" height="66px" width="124px" alt="Brand Logo Images">
+                                    <img src="{% static 'images/clients/deriv-logo.svg' %}" height="66px" width="124px" alt="Brand Logo Images">
                                 </a></li>
                             <li><a href="#">
-                                    <img src="assets/images/clients/stormnet-logo.webp" height="66px" width="124px" alt="Brand Logo Images">
+                                    <img src="{% static 'images/clients/stormnet-logo.webp' %}" height="66px" width="124px" alt="Brand Logo Images">
                                 </a></li>
                         </ul>
                     </div>
